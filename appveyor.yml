@@ -1,0 +1,13 @@
+version: 1.0.{build}
+branches:
+  only:
+  - /master/
+image: Visual Studio 2017
+configuration: Release
+platform: Win32
+build:
+  project: 7zFontChange.sln
+  verbosity: minimal
+artifacts:
+- path: $(Configuration)
+  name: 7zFontChange$(APPVEYOR_BUILD_VERSION)
